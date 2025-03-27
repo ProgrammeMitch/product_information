@@ -4,6 +4,7 @@
         <form @submit.prevent="submitForm">
             <input v-model="productName" type="text" placeholder="Product Name" required />
             <input v-model="manufacturer" type="text" placeholder="Manufacturer" required />
+            <input v-model="price" type="text" placeholder="Price in Naira" required />
             <input v-model="yearOfRelease" type="text" placeholder="Year of Release" required />
             <input v-model="width" type="text" placeholder="Width" required />
             <input v-model="height" type="text" placeholder="Height" required />
@@ -23,6 +24,7 @@ export default {
     setup() {
         const productName = ref("");
         const manufacturer = ref("");
+        const price = ref("");
         const yearOfRelease = ref("");
         const width = ref("");
         const height = ref("");
@@ -38,6 +40,7 @@ export default {
                     body: JSON.stringify({
                         productName: productName.value,
                         manufacturer: manufacturer.value,
+                        price: price.value,
                         yearOfRelease: yearOfRelease.value,
                         width: width.value,
                         height: height.value,
@@ -53,6 +56,7 @@ export default {
                 // ✅ Clear form fields after successful submission
                 productName.value = "";
                 manufacturer.value = "";
+                price.value = "";
                 yearOfRelease.value = "";
                 width.value = "";
                 height.value = "";

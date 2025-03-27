@@ -9,6 +9,7 @@
           <tr>
             <th>Product Name</th>
             <th>Manufacturer</th>
+            <th>Price</th>
             <th>Year</th>
             <th>Specification</th>
             <th>Height</th>
@@ -21,6 +22,7 @@
           <tr v-for="product in products" :key="product.id">
             <td>{{ product.productName }}</td>
             <td>{{ product.manufacturer }}</td>
+            <td>{{ product.price }}</td>
             <td>{{ product.yearOfRelease }}</td>
             <td>{{ product.specifications }}</td>
             <td>{{ product.height }}</td>
